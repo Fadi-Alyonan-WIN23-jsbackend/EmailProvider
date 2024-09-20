@@ -24,7 +24,7 @@ public class EmailSender
 
     [Function(nameof(EmailSender))]
     public async Task Run(
-        [ServiceBusTrigger("Email_request", Connection = "ServiceBusConnection")]
+        [ServiceBusTrigger("email_request", Connection = "ServiceBusConnection")]
         ServiceBusReceivedMessage message,
         ServiceBusMessageActions messageActions)
     {
